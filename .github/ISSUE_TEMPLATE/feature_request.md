@@ -2,19 +2,16 @@
 name: Feature request
 about: Suggest an idea for this project
 title: ''
-labels: ''
-assignees: ''
+labels: feature
+assignees: jun-takagi-sddgrp
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**依頼概要**
+> 具体的かつ簡潔に依頼概要を記述してください。
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**対応希望日**
+> 対応希望日を記述してください。
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**備考**
+> 補足情報があれば記述してください。
