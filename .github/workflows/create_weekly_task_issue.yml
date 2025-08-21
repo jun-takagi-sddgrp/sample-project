@@ -25,4 +25,4 @@ jobs:
           BODY: |
             ### Task
 
-            - [ ] `Authentication.php` と system_value_parameters の差分を確認する
+            - [ ] `Authentication.php` と `system_value_parameters` の差分を確認する
