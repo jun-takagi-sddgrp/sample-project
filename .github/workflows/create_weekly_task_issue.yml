@@ -16,15 +16,13 @@ jobs:
           gh issue create \
             --title "$TITLE" \
             --assignee "$ASSIGNEES" \
-            --label "$LABELS" \
             --body "$BODY"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
-          TITLE: ログインセッション値が追加されたかどうかを確認する
+          TITLE: ログインセッション値の差分を確認する
           ASSIGNEES: jun-takagi-sddgrp
-          LABELS: feature
           BODY: |
             ### Task
 
-            - [ ] system_value_parameters と `app/Libraries/Authentication.php` に定義しているログインセッション値取得メソッドの差分を確認する
+            - [ ] `Authentication.php` と system_value_parameters の差分を確認する
