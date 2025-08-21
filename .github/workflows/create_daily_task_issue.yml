@@ -11,7 +11,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - name: Create team sync issue
+      - name: Create issue
         run: |
           gh issue create \
             --title "$TITLE" \
