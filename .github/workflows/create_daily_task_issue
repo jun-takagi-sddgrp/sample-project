@@ -1,0 +1,29 @@
+name: Create Daily Task Issue
+on:
+  schedule:
+    - cron: 0 0 * * 1-5
+
+jobs:
+  create_issue:
+    name: Create Daily Task Issue
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create team sync issue
+        run: |
+          gh issue create \
+            --title "$TITLE" \
+            --assignee "$ASSIGNEES" \
+            --label "$LABELS" \
+            --body "$BODY"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TITLE: Message.php の差分更新
+          ASSIGNEES: jun-takagi-sddgrp
+          LABELS: feature
+          BODY: |
+            ### Task
+
+            - [ ] Message.php と [MAIN_メッセージ.xlsx](https://fivelibertacojp.sharepoint.com/:x:/r/sites/SDDUNIProject/Shared%20Documents/SDD%E7%A4%BE%E5%85%B1%E6%9C%89/200_%E8%A8%AD%E8%A8%88%E6%9B%B8%E7%AD%89/20030_%E4%BB%95%E6%A7%98%E6%9B%B8/MAIN_%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8.xlsx?d=w302542792bd74d06a1bc54f798af9977&csf=1&web=1&e=HCyqF4) の差分を確認する
