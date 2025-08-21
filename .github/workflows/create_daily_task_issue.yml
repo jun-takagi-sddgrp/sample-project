@@ -16,14 +16,12 @@ jobs:
           gh issue create \
             --title "$TITLE" \
             --assignee "$ASSIGNEES" \
-            --label "$LABELS" \
             --body "$BODY"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
-          TITLE: Message.php の差分更新
+          TITLE: メッセージの差分を確認する
           ASSIGNEES: jun-takagi-sddgrp
-          LABELS: feature
           BODY: |
             ### Task
 
